@@ -1,0 +1,51 @@
+/* Emoji */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.5em;
+    position: relative;
+    top: 10px;
+  }
+
+html { 
+  background:  url(https://38.media.tumblr.com/546c0cd48d71f210f9b67a389003790d/tumblr_neq0yw9rMA1tm16jjo1_500.gif) no-repeat center center fixed; 
+  background-size: cover;
+	font-family: 'Roboto', sans-serif;
+
+}
+h1{
+  font-size: 16em;
+  margin: .2em .5em;
+  color: rgba(255,255,255, 0.7);
+  margin-bottom:0px;
+}
+h2{
+  font-size: 1.7em;
+  margin: .2em .5em;
+  color: rgba(255,255,255, 0.6);
+}
+div.error{
+  position:absolute;
+  top:30%;
+  margin-top:-8em;
+  width:100%;
+  text-align:center;
+}
