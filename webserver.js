@@ -1,51 +1,63 @@
-const http = require("http");
-const fs = require('fs').promises;
+const
+http = require('http'),
+path = require('path'),
+fs = require('fs');
 
 const host = 'localhost';
 const port = 8080;
 
-const requestListener = function (req, res) {
-    res.setHeader("Content-Type", "text/html");
-    res.writeHead(200);
-
-    switch(req.url){
-        case "/emner":
-            fs.readFile(__dirname + "/emner.html")
-            .then(contents => {
-                res.end(contents);
-            })
-            .catch(err => {
-                res.writeHead(500);
-                res.end(err);
-                return;
-            });
-            break
-
-        case "/praktikvirksomheder":
-            fs.readFile(__dirname + "/praktikvirksomheder.html")
-            .then(contents => {
-                res.end(contents);
-            })
-            .catch(err => {
-                res.writeHead(500);
-                res.end(err);
-                return;
-            });
-            break
-        default:
-            fs.readFile(__dirname + "/index.html")
-            .then(contents => {
-                res.end(contents);
-            })
-            .catch(err => {
-                res.writeHead(500);
-                res.end(err);
-                return;
-            });
-    }
+const extensions = {
+    ".html" : "text/html",
+    ".css" : "text/css",
+    ".js" : "application/javascript",
+    ".png" : "image/png",
+    ".gif" : "image/gif",
+    ".jpg" : "image/jpeg"
 };
 
-const server = http.createServer(requestListener);
+function getFile(filePath, res, page404, mimeType){
+    fs.exists(filePath, function(exists){
+        if (exists){
+            fs.readFile(filePath, function(err, contents){
+                if (!err){
+                    res.writeHead(200, {
+                        "Content-Type" : mimeType,
+                        "Content-Length" : contents.length
+                    });
+                    res.end(contents);
+                } else {
+                    console.dir(err);
+                };
+            });
+        } else {
+            fs.readFile(page404, function(err, contents){
+                if (!err){
+                    res.writeHead(404, {"Content-Type" : "text/html"});
+                    res.end(contents);
+                } else {
+                    console.dir(err);
+                };
+            });
+        };
+    });
+};
+
+function requestHandler(req, res){
+    let
+    fileName = path.basename(req.url) || "index.html",
+    ext = path.extname(fileName),
+    localFolder = __dirname + "/public/",
+    page404 = localFolder + "404.html";
+
+    if (!extensions[ext]){
+        res.writeHead(404, {"Content-Type" : "text/html"});
+        res.end("&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;The requested file type is not supported&lt;/body&gt;&lt;/html&gt;");
+    };
+
+    getFile((localFolder + fileName), res, page404, extensions[ext]);
+};
+
+const server = http.createServer(requestHandler);
 server.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
 });
