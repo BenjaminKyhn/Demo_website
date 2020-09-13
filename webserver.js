@@ -49,11 +49,6 @@ function requestHandler(req, res){
     localFolder = __dirname + "/public/",
     page404 = localFolder + "404.html";
 
-    if (!extensions[ext]){
-        res.writeHead(404, {"Content-Type" : "text/html"});
-        res.end("&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;The requested file type is not supported&lt;/body&gt;&lt;/html&gt;");
-    };
-
     getFile((localFolder + fileName), res, page404, extensions[ext]);
 };
 
