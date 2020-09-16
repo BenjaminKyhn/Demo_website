@@ -3,8 +3,7 @@ http = require('http'),
 path = require('path'),
 fs = require('fs');
 
-const host = 'localhost';
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const extensions = {
     ".html" : "text/html",
@@ -53,6 +52,5 @@ function requestHandler(req, res){
 };
 
 const server = http.createServer(requestHandler);
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
-});
+server.listen(port);
+console.log("Server running at http://localhost:%d", port)

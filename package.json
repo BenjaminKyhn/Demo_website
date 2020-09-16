@@ -1,0 +1,11 @@
+{
+    "name": "demo-website",
+    "description": "Node.js webserver without using Express",
+    "version": "0.0.1",
+    "private": true,
+    "license": "MIT",
+    "author": "Benjamin Kyhn",
+    "scripts": {
+        "start": "node webserver.js"
+    }
+}
