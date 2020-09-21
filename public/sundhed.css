@@ -12,15 +12,15 @@ strong, b {
     font-weight: 400;
   }
 
+.fixedElements{
+    position: fixed;
+    width: 100%;
+}
+
 .header{
     display: flex;
     justify-content: center;
     background-color: white;
-    width: 100%;
-}
-
-.memes{
-    position: fixed;
     width: 100%;
 }
 
