@@ -1,132 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forside</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sundhed.css">
     <link rel="stylesheet" href="dice.css">
 </head>
+
 <body>
-    <nav>
-        <a href="/">Forside</a> |
-        <a href="/emner.html">Emner</a> |
-        <a href="/praktikvirksomheder.html">Praktikvirksomheder</a>
-      </nav>
+    <div class="fixedElements">
+        <div class="header">
+            <h1>Forside</h1>
+        </div>
 
-    <h1>Forside</h1>
-    <h2>Om praktikanten</h2>
-    <img src="https://i.imgur.com/gTWJl0n.png">
-    <h3>Navn:</h3>
-    <p>Benjamin Kyhn</p>
-    <h3>Beskrivelse:</h3>
-    <p>Jeg er 32 år og datamatikerstuderende på 3. semester ved Zealand Business College. Jeg har også en tidligere uddannelse som lærer, men har besluttet mig for at skifte branche og prøve kræfter med programmering. Jeg har altid interesseret mig for IT og synes det er superspændende at sidde og arbejde fokuseret med et projekt. Det fedeste ved datamatikeruddannelsen er oplevelsen af selvtilfredshed, når man ser sit færdige produkt blive taget i brug.</p>
-    <h3>Links til sociale medier:</h3>
-    <a href="https://www.linkedin.com/in/benjamin-kyhn-8bb360193/">LinkedIn</a>
-    <a href="https://www.facebook.com/benjamin.kyhn">Facebook</a>
-    <a href="https://www.instagram.com/benkyhn/?hl=da">Instagram</a>
+        <ul class="navbar">
+            <li><a href="/">Forside</a></li>
+            <li><a href="/emner.html">Emner</a></li>
+            <li><a href="/praktikvirksomheder.html">Praktikvirksomheder</a></li>
+            <li><a href="/sundhed.html">Quickguide til sundhed</a></li>
+        </ul>
+    </div>
 
-    <div id="dice">
-        <div id="d4-wrap">
-            <div id="d4">
-                <div class="d4" data-side="1"><div data-number="2"></div><div data-number="3"></div><div data-number="4"></div></div>
-                <div class="d4" data-side="2"><div data-number="1"></div><div data-number="3"></div><div data-number="4"></div></div>
-                <div class="d4" data-side="3"><div data-number="1"></div><div data-number="2"></div><div data-number="4"></div></div>
-                <div class="d4" data-side="4"><div data-number="1"></div><div data-number="2"></div><div data-number="3"></div></div>
-            </div>
-        </div>
-        <div id="d6-wrap">
-            <div id="d6">
-                <div class="d6" data-side="1"></div>
-                <div class="d6" data-side="2"></div>
-                <div class="d6" data-side="3"></div>
-                <div class="d6" data-side="4"></div>
-                <div class="d6" data-side="5"></div>
-                <div class="d6" data-side="6"></div>
-            </div>
-        </div>
-        <div id="d8-wrap">
-            <div id="d8">
-                <div class="d8" data-side="1"></div>
-                <div class="d8" data-side="2"></div>
-                <div class="d8" data-side="3"></div>
-                <div class="d8" data-side="4"></div>
-                <div class="d8" data-side="5"></div>
-                <div class="d8" data-side="6"></div>
-                <div class="d8" data-side="7"></div>
-                <div class="d8" data-side="8"></div>
-            </div>
-        </div>
-        <div id="d10-wrap">
-            <div id="d10">
-                <div class="d10" data-side="1"></div>
-                <div class="d10" data-side="2"></div>
-                <div class="d10" data-side="3"></div>
-                <div class="d10" data-side="4"></div>
-                <div class="d10" data-side="5"></div>
-                <div class="d10" data-side="6"></div>
-                <div class="d10" data-side="7"></div>
-                <div class="d10" data-side="8"></div>
-                <div class="d10" data-side="9"></div>
-                <div class="d10" data-side="10"></div>
-            </div>
-        </div>
-        <div id="d12-wrap">
-            <div id="d12">
-                <div class="d12" data-side="1"></div>
-                <div class="d12" data-side="2"></div>
-                <div class="d12" data-side="3"></div>
-                <div class="d12" data-side="4"></div>
-                <div class="d12" data-side="5"></div>
-                <div class="d12" data-side="6"></div>
-                <div class="d12" data-side="7"></div>
-                <div class="d12" data-side="8"></div>
-                <div class="d12" data-side="9"></div>
-                <div class="d12" data-side="10"></div>
-                <div class="d12" data-side="11"></div>
-                <div class="d12" data-side="12"></div>
-            </div>
-        </div>
-        <div id="d20-wrap">
-            <div id="d20">
-                <div class="d20" data-side="1"></div>
-                <div class="d20" data-side="2"></div>
-                <div class="d20" data-side="3"></div>
-                <div class="d20" data-side="4"></div>
-                <div class="d20" data-side="5"></div>
-                <div class="d20" data-side="6"></div>
-                <div class="d20" data-side="7"></div>
-                <div class="d20" data-side="8"></div>
-                <div class="d20" data-side="9"></div>
-                <div class="d20" data-side="10"></div>
-                <div class="d20" data-side="11"></div>
-                <div class="d20" data-side="12"></div>
-                <div class="d20" data-side="13"></div>
-                <div class="d20" data-side="14"></div>
-                <div class="d20" data-side="15"></div>
-                <div class="d20" data-side="16"></div>
-                <div class="d20" data-side="17"></div>
-                <div class="d20" data-side="18"></div>
-                <div class="d20" data-side="19"></div>
-                <div class="d20" data-side="20"></div>
+    <div class="columns">
+        <div class="main">
+            <h2>Om praktikanten</h2>
+            <img src="https://i.imgur.com/gTWJl0n.png">
+            <h3>Navn:</h3>
+            <p>Benjamin Kyhn</p>
+            <h3>Beskrivelse:</h3>
+            <p>Jeg er 32 år og datamatikerstuderende på 3. semester ved Zealand Business College. Jeg har også en
+                tidligere
+                uddannelse som lærer, men har besluttet mig for at skifte branche og prøve kræfter med programmering.
+                Jeg
+                har altid interesseret mig for IT og synes det er superspændende at sidde og arbejde fokuseret med et
+                projekt. Det fedeste ved datamatikeruddannelsen er oplevelsen af selvtilfredshed, når man ser sit
+                færdige
+                produkt blive taget i brug.</p>
+            <h3>Links til sociale medier:</h3>
+            <a href="https://www.linkedin.com/in/benjamin-kyhn-8bb360193/">LinkedIn</a>
+            <a href="https://www.facebook.com/benjamin.kyhn">Facebook</a>
+            <a href="https://www.instagram.com/benkyhn/?hl=da">Instagram</a>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+            <br>
+            <p>Hej</p>
+
+            <div id="dice">
+                <div id="d4-wrap">
+                    <div id="d4">
+                        <div class="d4" data-side="1">
+                            <div data-number="2"></div>
+                            <div data-number="3"></div>
+                            <div data-number="4"></div>
+                        </div>
+                        <div class="d4" data-side="2">
+                            <div data-number="1"></div>
+                            <div data-number="3"></div>
+                            <div data-number="4"></div>
+                        </div>
+                        <div class="d4" data-side="3">
+                            <div data-number="1"></div>
+                            <div data-number="2"></div>
+                            <div data-number="4"></div>
+                        </div>
+                        <div class="d4" data-side="4">
+                            <div data-number="1"></div>
+                            <div data-number="2"></div>
+                            <div data-number="3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="d6-wrap">
+                    <div id="d6">
+                        <div class="d6" data-side="1"></div>
+                        <div class="d6" data-side="2"></div>
+                        <div class="d6" data-side="3"></div>
+                        <div class="d6" data-side="4"></div>
+                        <div class="d6" data-side="5"></div>
+                        <div class="d6" data-side="6"></div>
+                    </div>
+                </div>
+                <div id="d8-wrap">
+                    <div id="d8">
+                        <div class="d8" data-side="1"></div>
+                        <div class="d8" data-side="2"></div>
+                        <div class="d8" data-side="3"></div>
+                        <div class="d8" data-side="4"></div>
+                        <div class="d8" data-side="5"></div>
+                        <div class="d8" data-side="6"></div>
+                        <div class="d8" data-side="7"></div>
+                        <div class="d8" data-side="8"></div>
+                    </div>
+                </div>
+                <div id="d10-wrap">
+                    <div id="d10">
+                        <div class="d10" data-side="1"></div>
+                        <div class="d10" data-side="2"></div>
+                        <div class="d10" data-side="3"></div>
+                        <div class="d10" data-side="4"></div>
+                        <div class="d10" data-side="5"></div>
+                        <div class="d10" data-side="6"></div>
+                        <div class="d10" data-side="7"></div>
+                        <div class="d10" data-side="8"></div>
+                        <div class="d10" data-side="9"></div>
+                        <div class="d10" data-side="10"></div>
+                    </div>
+                </div>
+                <div id="d12-wrap">
+                    <div id="d12">
+                        <div class="d12" data-side="1"></div>
+                        <div class="d12" data-side="2"></div>
+                        <div class="d12" data-side="3"></div>
+                        <div class="d12" data-side="4"></div>
+                        <div class="d12" data-side="5"></div>
+                        <div class="d12" data-side="6"></div>
+                        <div class="d12" data-side="7"></div>
+                        <div class="d12" data-side="8"></div>
+                        <div class="d12" data-side="9"></div>
+                        <div class="d12" data-side="10"></div>
+                        <div class="d12" data-side="11"></div>
+                        <div class="d12" data-side="12"></div>
+                    </div>
+                </div>
+                <div id="d20-wrap">
+                    <div id="d20">
+                        <div class="d20" data-side="1"></div>
+                        <div class="d20" data-side="2"></div>
+                        <div class="d20" data-side="3"></div>
+                        <div class="d20" data-side="4"></div>
+                        <div class="d20" data-side="5"></div>
+                        <div class="d20" data-side="6"></div>
+                        <div class="d20" data-side="7"></div>
+                        <div class="d20" data-side="8"></div>
+                        <div class="d20" data-side="9"></div>
+                        <div class="d20" data-side="10"></div>
+                        <div class="d20" data-side="11"></div>
+                        <div class="d20" data-side="12"></div>
+                        <div class="d20" data-side="13"></div>
+                        <div class="d20" data-side="14"></div>
+                        <div class="d20" data-side="15"></div>
+                        <div class="d20" data-side="16"></div>
+                        <div class="d20" data-side="17"></div>
+                        <div class="d20" data-side="18"></div>
+                        <div class="d20" data-side="19"></div>
+                        <div class="d20" data-side="20"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- my extra 15 divs - free to a good home -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
 </body>
+
 </html>
